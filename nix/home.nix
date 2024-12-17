@@ -29,6 +29,7 @@
     pkgs.impl
     pkgs.gotests
     pkgs.golangci-lint
+    pkgs.templ
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -113,6 +114,7 @@
       pkgs.vscode-extensions.bbenoist.nix
       pkgs.vscode-extensions.golang.go
       pkgs.vscode-extensions.esbenp.prettier-vscode
+      pkgs.vscode-extensions.ms-azuretools.vscode-docker
     ];
     userSettings = {
       "editor.formatOnSave" = true;
@@ -123,6 +125,9 @@
       "tailwindCSS.includeLanguages" = {
         "templ" = "html";
       };
+      "terminal.external.osxExec" = "iTerm.app";
+      "terminal.integrated.shell.osx" = "/etc/profiles/per-user/strantalis/bin/zsh";
+      "terminal.integrated.fontFamily" = "FiraCode Nerd Font Mono";
     };
   };
   programs.git = {

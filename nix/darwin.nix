@@ -8,6 +8,7 @@
     environment.systemPackages = [ 
       pkgs.vim 
       pkgs.colima
+      pkgs.docker-client
       pkgs.spotify
     ];
     environment.pathsToLink = [
@@ -50,7 +51,7 @@
         "/Applications/Firefox.app"
         "/Applications/iTerm.app"
         "/Applications/Nix\ Apps/Spotify.app"
-        "Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
+        "/Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
       ];
       finder.AppleShowAllFiles = true;
       finder.FXPreferredViewStyle = "Nlsv";
