@@ -3,6 +3,8 @@
 { config, pkgs, ... }:
 
 {
+    nix.optimise.automatic = true;
+  
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep wget
     environment.systemPackages = [ 
@@ -47,11 +49,14 @@
     system.defaults = {
       dock.autohide = true;
       dock.persistent-apps = [
+        "/Applications/System\ Settings.app"
+        "/Applications/NVIDIA\ GeForce\ Now.app"
+        "/Applications/Nix\ Apps/Spotify.app"
+        "/Applications/Signal.app"
         "/Applications/Bitwarden.app"
         "/Applications/Firefox.app"
         "/Applications/iTerm.app"
-        "/Applications/Nix\ Apps/Spotify.app"
-        "/Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
+        "~/Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
       ];
       finder.AppleShowAllFiles = true;
       finder.FXPreferredViewStyle = "Nlsv";
