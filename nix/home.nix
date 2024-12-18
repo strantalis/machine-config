@@ -95,6 +95,7 @@
       "zsh-users/zsh-autosuggestions"
       "zsh-users/zsh-history-substring-search"
       "agkozak/zsh-z"
+      "ohmyzsh/ohmyzsh path:lib/git.zsh"
       "ohmyzsh/ohmyzsh path:plugins/git" 
     ];
     history = {
