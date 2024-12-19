@@ -97,6 +97,7 @@
       "agkozak/zsh-z"
       "ohmyzsh/ohmyzsh path:lib/git.zsh"
       "ohmyzsh/ohmyzsh path:plugins/git" 
+      "ohmyzsh/ohmyzsh path:plugins/go"
     ];
     history = {
       append = true;
@@ -116,6 +117,7 @@
       pkgs.vscode-extensions.golang.go
       pkgs.vscode-extensions.esbenp.prettier-vscode
       pkgs.vscode-extensions.ms-azuretools.vscode-docker
+      pkgs.vscode-extensions.github.copilot
     ];
     userSettings = {
       "editor.formatOnSave" = true;
