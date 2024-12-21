@@ -81,7 +81,7 @@
   #  /etc/profiles/per-user/strantalis/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "code";
   };
 
   # Let Home Manager install and manage itself.
@@ -97,7 +97,7 @@
       "agkozak/zsh-z"
       "ohmyzsh/ohmyzsh path:lib/git.zsh"
       "ohmyzsh/ohmyzsh path:plugins/git" 
-      "ohmyzsh/ohmyzsh path:plugins/go"
+      "ohmyzsh/ohmyzsh path:plugins/golang"
     ];
     history = {
       append = true;
@@ -112,12 +112,16 @@
   };
   programs.vscode = {
     enable = true;
-    extensions = [
-      pkgs.vscode-extensions.bbenoist.nix
-      pkgs.vscode-extensions.golang.go
-      pkgs.vscode-extensions.esbenp.prettier-vscode
-      pkgs.vscode-extensions.ms-azuretools.vscode-docker
-      pkgs.vscode-extensions.github.copilot
+    enableExtensionUpdateCheck = false;
+    mutableExtensionsDir = false;
+    extensions = with pkgs.vscode-marketplace; [
+      bbenoist.nix
+      golang.go
+      esbenp.prettier-vscode
+      ms-azuretools.vscode-docker
+      github.copilot
+      bradlc.vscode-tailwindcss
+      a-h.templ
     ];
     userSettings = {
       "editor.formatOnSave" = true;
@@ -140,6 +144,9 @@
     userEmail = "stran58@gmail.com";
     userName = "strantalis";
     extraConfig = {
+      core = {
+        editor = "code --wait";
+      };
       commit = {
         gpgsign = true;
       };
