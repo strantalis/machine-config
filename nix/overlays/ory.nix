@@ -1,5 +1,4 @@
-self: super: 
-{
+self: super: {
   ory = super.ory.overrideAttrs (old: rec {
     version = "v1.1.0"; # Replace with the desired version
 
